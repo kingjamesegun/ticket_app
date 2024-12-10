@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 Color primary = const Color.fromARGB(0, 0, 83, 106);
 
 class AppStyles {
-  static Color primaryColor = primary;
+  // COLORS
+  static Color primaryColor = const Color.fromARGB(0, 0, 83, 106);
   static Color textColor = const Color.fromARGB(255, 1, 43, 55);
   static Color bgColor = const Color(0xffeeedf2);
+  static Color ticketBlue = const Color(0xff526799);
+  static Color ticketOrange = const Color(0xfff37b67);
 
+// FONTS
   static TextStyle baseTextStyle =
       TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: textColor);
   static TextStyle headLineStyle1 =
@@ -15,4 +19,6 @@ class AppStyles {
       TextStyle(fontSize: 21, fontWeight: FontWeight.bold, color: textColor);
   static TextStyle headLineStyle3 =
       const TextStyle(fontSize: 17, fontWeight: FontWeight.w700);
+  static TextStyle headLineStyle4 =
+      const TextStyle(fontSize: 14, fontWeight: FontWeight.w700);
 }

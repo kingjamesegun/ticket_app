@@ -22,7 +22,7 @@ class SectionTexts extends StatelessWidget {
             onTap: () {},
             child: Text("View all",
                 style: AppStyles.baseTextStyle
-                    .copyWith(color: AppStyles.primaryColor)),
+                    .copyWith(color: AppStyles.textColor)),
           ),
         ],
       ),

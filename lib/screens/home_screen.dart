@@ -64,22 +64,20 @@ class HomeScreen extends StatelessWidget {
                     Text("Search Icon"),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              const SectionTexts(
+                bigText: "Upcoming Flights",
+                smallText: "View all",
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const TicketView(),
             ]),
           ),
-          const SizedBox(
-            height: 40,
-          ),
-          const SectionTexts(
-            bigText: "Upcoming Flights",
-            smallText: "View all",
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: const TicketView()),
         ]));
   }
 }

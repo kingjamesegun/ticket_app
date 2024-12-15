@@ -8,7 +8,8 @@ import 'package:ticket_app/base/widgets/text_style_fourth.dart';
 import 'package:ticket_app/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+  final Map<String, dynamic> ticket;
+  const TicketView({super.key, required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,9 @@ class TicketView extends StatelessWidget {
                     children: [
                       // departure and arrival with icons
                       Row(children: [
-                        const TextStyleThird(text: "NYC"),
+                        TextStyleThird(
+                          text: ticket["from"]["code"],
+                        ),
                         Expanded(child: Container()),
                         const BigDot(),
                         Expanded(
@@ -54,24 +57,25 @@ class TicketView extends StatelessWidget {
                         )),
                         const BigDot(),
                         Expanded(child: Container()),
-                        const TextStyleThird(text: "LDC")
+                        TextStyleThird(text: ticket["to"]["code"])
                       ]),
 
                       const SizedBox(
                         height: 3,
                       ),
                       // departure names with time
-                      const Row(
+                      Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const SizedBox(
-                                width: 100,
-                                child: TextStyleFourth(text: "New-York")),
-                            TextStyleFourth(text: "8:00 AM"),
                             SizedBox(
                                 width: 100,
                                 child: TextStyleFourth(
-                                  text: "London",
+                                    text: ticket["from"]["name"])),
+                            TextStyleFourth(text: ticket['flying_time']),
+                            SizedBox(
+                                width: 100,
+                                child: TextStyleFourth(
+                                  text: ticket["to"]["name"],
                                   align: TextAlign.end,
                                 )),
                           ])

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/screens/all_tickets.dart';
 
 class SectionTexts extends StatelessWidget {
   const SectionTexts(
@@ -18,7 +19,9 @@ class SectionTexts extends StatelessWidget {
             style: AppStyles.headLineStyle2,
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, "all_tickets");
+            },
             child: Text("View all",
                 style: AppStyles.baseTextStyle
                     .copyWith(color: AppStyles.textColor)),

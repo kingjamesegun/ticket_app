@@ -9,7 +9,8 @@ import 'package:ticket_app/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
-  const TicketView({super.key, required this.ticket});
+  final bool wholeScreen;
+  const TicketView({super.key, required this.ticket, this.wholeScreen = false});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class TicketView extends StatelessWidget {
         width: size.width * 0.85,
         height: 189,
         child: Container(
-          margin: const EdgeInsets.only(right: 16),
+          margin: EdgeInsets.only(right: wholeScreen ? 0 : 16),
           child: Column(
             children: [
               Container(
@@ -105,24 +106,24 @@ class TicketView extends StatelessWidget {
                       borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(21),
                           bottomRight: Radius.circular(21))),
-                  child: const Column(
+                  child: Column(
                     children: [
                       // departure and arrival with icons
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             AppColumnText(
-                              topText: "1 May",
+                              topText: ticket['date'],
                               bottomText: "Date",
                               alignment: CrossAxisAlignment.start,
                             ),
                             AppColumnText(
-                              topText: "8:00 AM",
+                              topText: ticket['departure_time'],
                               bottomText: "Departure time",
                               alignment: CrossAxisAlignment.center,
                             ),
                             AppColumnText(
-                              topText: "23",
+                              topText: ticket['number'].toString(),
                               bottomText: "Number",
                               alignment: CrossAxisAlignment.end,
                             )

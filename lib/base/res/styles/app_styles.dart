@@ -11,8 +11,7 @@ class AppStyles {
   static Color ticketOrange = const Color(0xfff37b67);
 
 // FONTS
-  static TextStyle baseTextStyle =
-      TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: textColor);
+  static TextStyle baseTextStyle = TextStyle(fontSize: 16, color: textColor);
   static TextStyle headLineStyle1 =
       TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: textColor);
   static TextStyle headLineStyle2 =

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
-import 'package:ticket_app/screens/all_tickets.dart';
 
 class SectionTexts extends StatelessWidget {
   const SectionTexts(
-      {super.key, required this.bigText, required this.smallText});
+      {super.key,
+      required this.bigText,
+      required this.smallText,
+      required this.onTap});
   final String bigText;
   final String smallText;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +22,7 @@ class SectionTexts extends StatelessWidget {
             style: AppStyles.headLineStyle2,
           ),
           InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, "all_tickets");
-            },
+            onTap: onTap,
             child: Text("View all",
                 style: AppStyles.baseTextStyle
                     .copyWith(color: AppStyles.textColor)),

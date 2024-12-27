@@ -4,11 +4,12 @@ Color primary = const Color.fromARGB(0, 0, 83, 106);
 
 class AppStyles {
   // COLORS
-  static Color primaryColor = const Color.fromARGB(0, 0, 83, 106);
+  static Color primaryColor = const Color.fromARGB(0, 6, 25, 30);
   static Color textColor = const Color.fromARGB(255, 1, 43, 55);
   static Color bgColor = const Color(0xffeeedf2);
   static Color ticketBlue = const Color(0xff526799);
   static Color ticketOrange = const Color(0xfff37b67);
+  static Color kakiColor = const Color(0xfff37b67);
 
 // FONTS
   static TextStyle baseTextStyle = TextStyle(fontSize: 16, color: textColor);

@@ -4,8 +4,8 @@ import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/section_texts.dart';
 import 'package:ticket_app/base/utils/all_json.dart';
 import 'package:ticket_app/base/widgets/ticket_view.dart';
-import 'package:ticket_app/screens/widgets/hotel.dart';
-import '../base/res/media.dart';
+import 'package:ticket_app/screens/home/widgets/hotel.dart';
+import '../../base/res/media.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
